@@ -1,0 +1,1 @@
+# shorcut-pterodactyl-installer
