@@ -160,7 +160,7 @@ init_variables() {
 }
 
 validate_environment() {
-    # Cek PHP
+
     if ! command -v php >/dev/null 2>&1; then
         err "PHP tidak ditemukan. Pastikan PHP terinstal dan berada di PATH."
         exit 1
@@ -268,10 +268,8 @@ main() {
     prompt_missing_inputs
     confirm_execution
     
-    # Pindah ke direktori panel
     pushd "$PANEL_DIR" >/dev/null
     
-    # Eksekusi perintah
     if create_location && create_node; then
         ok "Lokasi & node berhasil dibuat."
         print "Periksa panel untuk memastikan node sudah muncul dan alokasi OK."
